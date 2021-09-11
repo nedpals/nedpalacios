@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  background: rgb(212, 212, 212);
+  font-size: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.secondary-text {
+  color: rgb(221,51,51);
+}
+
+.button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.3rem 1.5rem;
+  background: rgb(244,244,244);
+  background: -moz-linear-gradient(top,  rgb(244,244,244) 0%, rgb(193,193,193) 100%);
+  background: -webkit-linear-gradient(top,  rgb(244,244,244) 0%,rgb(193,193,193) 100%);
+  background: linear-gradient(to bottom,  rgb(244,244,244) 0%,rgb(193,193,193) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#c1c1c1',GradientType=0 );
+  border: 1px solid #b9b9b9;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.button img {
+  margin-left: 0.5rem;
+}
+
+.button:hover,
+.button:focus {
+  background: rgb(237,237,237);
+  background: -moz-linear-gradient(top,  rgb(237,237,237) 0%, rgb(160,160,160) 100%);
+  background: -webkit-linear-gradient(top,  rgb(237,237,237) 0%,rgb(160,160,160) 100%);
+  background: linear-gradient(to bottom,  rgb(237,237,237) 0%,rgb(160,160,160) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#a0a0a0',GradientType=0 );
+  border-color: #999999;
+}
+
+.button.is-secondary {
+  background: rgb(253,58,58);
+  background: -moz-linear-gradient(top,  rgb(253,58,58) 48%, rgb(164,38,38) 100%);
+  background: -webkit-linear-gradient(top,  rgb(253,58,58) 48%,rgb(164,38,38) 100%);
+  background: linear-gradient(to bottom,  rgb(253,58,58) 48%,rgb(164,38,38) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd3a3a', endColorstr='#a42626',GradientType=0 );
+  color: white;
+  border-color: rgb(164,38,38);
+}
+
+.button.is-secondary:hover,
+.button.is-secondary:focus {
+  background: rgb(221,51,51);
+  background: -moz-linear-gradient(top,  rgb(221,51,51) 0%, rgb(140,40,33) 100%);
+  background: -webkit-linear-gradient(top,  rgb(221,51,51) 0%,rgb(140,40,33) 100%);
+  background: linear-gradient(to bottom,  rgb(221,51,51) 0%,rgb(140,40,33) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd3333', endColorstr='#8c2821',GradientType=0 );
+  border-color: rgb(140,40,33);
+}
+
+
+header {
+  background: rgb(0,173,127);
+  background: -moz-linear-gradient(top,  rgb(0,173,127) 0%, rgb(31,133,94) 100%);
+  background: -webkit-linear-gradient(top,  rgb(0,173,127) 0%,rgb(31,133,94) 100%);
+  background: linear-gradient(to bottom,  rgb(0,173,127) 0%,rgb(31,133,94) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ad7f', endColorstr='#1f855e',GradientType=0 );
+  color: white;
+  padding: 1.5rem 1rem;
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .site-name {
+  font-family: "Lobster", sans-serif;
+  font-size: 2rem;
+}
+
+header .site-name img {
+  width: 15rem;
+}
+
+main {
+  background-color: white;
+}
+
+.jumbotron {
+  padding: 5rem 3rem;
+  background-color: gray;
+  background-image: url(https://source.unsplash.com/logv9s7f67o/1600x900);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.jumbotron .order-button {
+  font-size: 1.3rem;
+  padding: 0.4rem 1.8rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.section > h2,
+.section > p {
+  align-self: flex-start;
+}
+
+.section.is-centered > h2,
+.section.is-centered > p {
+  align-self: center;
+  text-align: center;
+}
+
+.section > p {
+  color: rgb(77, 77, 77);
+  margin-bottom: 2rem;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -0.3rem;
+  margin-right: -0.3rem;
+}
+
+.food-list .food-card {
+  width: calc(25% - 0.6rem);
+  margin: 0.3rem;
+}
+
+.food-card {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.39);
+  -webkit-box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.39);
+  -moz-box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.39);  padding: 0.5rem;
+  cursor: pointer;
+  background: white;
+  transition: transform 250ms;
+}
+
+.food-card:hover {
+  border-color: rgb(0,173,127);
+  transform: scale(1.1);
+}
+
+.food-card .description {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}
+
+.food-card .description p {
+  font-size: 0.9rem;
+  color: rgb(77, 77, 77);
+  margin-bottom: 1.5rem;
+}
+
+.food-card .description span {
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.food-card .image {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: inherit;
+}
+
+.food-card .image:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: calc(calc(1 / 1) * 100%);
+}
+
+.food-card.is-horizontal {
+  flex-direction: row;
+}
+
+.food-card.is-horizontal .description {
+  padding-top: 0;
+  padding-right: 0.5rem;
+}
+
+.food-card.is-horizontal .description p {
+  margin-bottom: 0.5rem;
+}
+
+.food-card.is-horizontal .image {
+  width: 70px;
+}
+
+.food-list.is-best-seller {
+  width: 80%;
+}
+
+.food-list.is-best-seller .food-card {
+  width: calc(50% - 0.6rem);
+  margin: 0.3rem;
+}
+
+#categories {
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 1%, rgba(255,255,255,1) 78%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 1%,rgba(255,255,255,1) 78%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 1%,rgba(255,255,255,1) 78%,rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+#categories ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+#categories ul li {
+  margin: 0.2rem;
+}
+
+#categories ul li a {
+  text-decoration: none;
+  background: rgb(211, 211, 211);
+  color: black;
+  padding: 0.8rem 1.5rem;
+}
+
+#categories ul li a:hover {
+  background: rgb(200, 200, 200);
+}
+
+.delivery-box {
+  background-image: url(https://source.unsplash.com/afDu-GuxjjM/1600x900);
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+}
+
+.delivery-box .content-box {
+  background-color: white;
+  padding: 2rem 2rem;
+  width: 45%;
+}
+
+.delivery-box .title {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.delivery-box .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.delivery-box .phone-number {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #4E4E4E;
+  color: white;
+  padding: 2rem 2rem;
+}
+
+footer a  {
+  color: white;
+}
+
+footer .links-and-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+footer .info h3,
+footer .links h3 {
+  margin-bottom: 1.5rem;
+}
+
+footer .links {
+  color: white;
+  text-align: right;
+}
+
+footer .links ul {
+  padding-left: 0;
+}
+
+footer .links li {
+  list-style-type: none;
+}
+
+footer .links li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .links li a:hover {
+  opacity: 0.8;
+}
