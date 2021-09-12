@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  color: rgb(255, 136, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding: 0;
+  background: rgb(44, 44, 44);
+  color: #fff;
+  height: 78vh;
+}
+
+.heading .heading-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.heading .info {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading .info h1 {
+  font-size: 3rem;
+}
+
+.heading .info p {
+  font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: orange;
+}
+
+.heading .avatar {
+  height: 100%;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.introduction {
+  padding: 5rem 7rem;
+}
+
+.introduction p {
+  font-size: 1.5rem;
+}
+
+.introduction p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.contributions {
+  border-top: 1px solid rgb(204, 204, 204);
+  padding: 2rem 2rem;
+}
+
+.contributions h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contributions li {
+  font-size: 1.35rem;
+}
+
+footer {
+  padding: 2rem;
+}
