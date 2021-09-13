@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Exo 2", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #2C363F;
+  color: #F2F5EA;
+}
+
+header {
+  background-color: transparent;
+  /* padding: 2rem; */
+  padding-left: 8px;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 17rem;
+  color: #F2F5EA;
+}
+
+header:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  content: "";
+  height: 100%;
+  background: rgb(231,90,124);
+  background: -moz-linear-gradient(top,  rgba(231,90,124,1) 0%, rgba(2,169,234,1) 50%, rgba(125,131,255,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(231,90,124,1) 0%,rgba(2,169,234,1) 50%,rgba(125,131,255,1) 100%);
+  background: linear-gradient(to bottom,  rgba(231,90,124,1) 0%,rgba(2,169,234,1) 50%,rgba(125,131,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e75a7c', endColorstr='#7d83ff',GradientType=0 );
+}
+
+header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 100;
+}
+
+header p {
+  margin-left: 2rem;
+  margin-top: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin-right: -1rem;
+}
+
+nav ul li {
+  display: flex;
+  width: 100%;
+}
+
+nav ul li a {
+  color: #f2f5eabd;
+  text-decoration: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  align-self: stretch;
+  font-weight: 300;
+  font-size: 1.3rem;
+  border-left: 5px solid transparent;
+}
+
+nav ul li a:hover {
+  color: #F2F5EA;
+  border-color: #F2F5EA;
+}
+
+nav ul li a.active {
+  color: #F2F5EA;
+  border-color: #F2F5EA;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  padding-left: 17rem;
+}
+
+.gallery > .container {
+  max-width: 1000px;
+}
+
+.gallery h2 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.gallery .gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.gallery .gallery-items .gallery-item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.gallery .gallery-items .gallery-item .photo {
+  width: 100%;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.gallery .gallery-items .gallery-item .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom: 5px solid transparent;
+}
+
+.gallery .gallery-items .gallery-item .info .title {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.gallery .gallery-items .gallery-item .info .meta {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.gallery .gallery-items .gallery-item .info .description {
+  font-size: 1.05rem;
+  line-height: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.gallery .gallery-items .gallery-item .info .button {
+  text-decoration: none;
+  background-color: #F2F5EA;
+  color: #2C363F;
+  padding: 0.8rem 2rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.gallery .gallery-items .gallery-item .info .button:hover {
+  background-color: #e3e7d8;
+}
+
+.gallery .gallery-items .gallery-item:first-child {
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  border: 0;
+}
+
+.gallery .gallery-items .gallery-item:first-child .photo {
+  width: 40%;
+  padding-bottom: 30%;
+  margin-bottom: 0;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  border-top-right-radius: 0;
+}
+
+.gallery .gallery-items .gallery-item:first-child .info {
+  padding: 2rem;
+  width: 60%;
+  background-color: inherit;
+  color: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: 0;
+  border: 0;
+}
+
+.gallery .gallery-items .gallery-item:first-child .info .title {
+  font-size: 2.5rem;
+}
+
+.gallery .gallery-items .gallery-item:first-child .info .meta {
+  font-size: 1.5rem;
+}
+
+.gallery .gallery-items .gallery-item:first-child .info .description {
+  font-size: 1.1rem;
+}
+
+.gallery .gallery-items .gallery-item:first-child .info .button {
+  margin-top: auto;
+  align-self: flex-end;
+  background-color: transparent;
+  color: #F2F5EA;
+  border: 3px solid #F2F5EA;
+  border-radius: 3rem;
+}
+
+.gallery .gallery-items .gallery-item:first-child .info .button:hover {
+  background-color: #F2F5EA;
+}
+
+#bio_and_health {
+  background-color: #2C363F;
+  color: #F2F5EA;
+}
+
+#bio_and_health .gallery-items .gallery-item .info {
+  border-color: #E75A7C;
+}
+
+#bio_and_health .gallery-items .gallery-item:first-child {
+  background-color: #E75A7C;
+}
+
+#bio_and_health .gallery-items .gallery-item:first-child .button:hover {
+  color: #E75A7C;
+}
+
+#learning {
+  background-color: #E75A7C;
+  /* color: #2C363F; */
+  color: #F2F5EA;
+}
+
+#learning .gallery-items .gallery-item .info {
+  border-color: #2C363F;
+}
+
+#learning .gallery-items .gallery-item:first-child {
+  background-color: #2C363F;
+}
+
+#learning .gallery-items .gallery-item:first-child .button:hover {
+  color: #2C363F;
+}
+
+#smart_iot {
+  background-color: #02A9EA;
+  color: #F2F5EA;
+}
+
+#smart_iot .gallery-items .gallery-item .info {
+  border-color: #F2F5EA;
+}
+
+#smart_iot .gallery-items .gallery-item:first-child {
+  background-color: #7D83FF;
+}
+
+#smart_iot .gallery-items .gallery-item:first-child .button:hover {
+  color: #7D83FF;
+}
