@@ -15,18 +15,6 @@ function handleError(err) {
   }
 }
 
-function initializeFirebase() {
-  firebase.initializeApp({
-    apiKey: "AIzaSyCpUhBEiPU35g7H0QZBx5kjofa_mpyqRNQ",
-    authDomain: "site-counter-f78d0.firebaseapp.com",
-    projectId: "site-counter-f78d0",
-    storageBucket: "site-counter-f78d0.appspot.com",
-    messagingSenderId: "629387880758",
-    appId: "1:629387880758:web:b8b216b72e1918d5162b97",
-    databaseURL: "https://site-counter-f78d0-default-rtdb.asia-southeast1.firebasedatabase.app/"
-  });
-}
-
 function startCounter() {
   var db = firebase.firestore();
   var visitors = db.collection('visitors');
@@ -95,5 +83,4 @@ function startCounter() {
     .catch(handleError);
 }
 
-initializeFirebase();
 startCounter();
