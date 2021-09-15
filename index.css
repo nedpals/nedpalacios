@@ -328,15 +328,15 @@ header ul li a.active:after {
 .projects-bg {
   margin-top: -13rem;
   background-image: url(portfolio_assets/diagonal-bg.svg);
-  height: 200vh;
-  background-size: 150%;
+  height: 80rem;
+  background-size: 180%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #projects {
   padding: 3rem 0;
-  margin-top: -149vh;
+  margin-top: -62rem;
 }
 
 #projects .heading {
