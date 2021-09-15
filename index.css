@@ -444,8 +444,8 @@ footer {
 
 .footer-bg {
   background-image: url(portfolio_assets/grid-fade.svg);
-  height: 100vh;
+  height: 100rem;
   background-repeat: repeat-x;
   background-position: bottom;
-  margin-top: -90vh;
+  margin-top: -99.3rem;
 }
