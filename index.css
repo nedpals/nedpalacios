@@ -449,3 +449,11 @@ footer {
   background-position: bottom;
   margin-top: -99.3rem;
 }
+
+#about, #projects, #contact {
+  scroll-margin-top: 55px;
+}
+
+#skills {
+  scroll-margin-top: 80px;
+}

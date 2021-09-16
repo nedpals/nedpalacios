@@ -4,7 +4,7 @@ var projectsEl = document.getElementById('projects');
 var links = document.querySelectorAll('header nav ul li a');
 var linkIndex = 0;
 
-var OFFSET = 50;
+var OFFSET = 85;
 var ACTIVE_CLASS = 'active';
 
 function toggleClass() {
@@ -17,14 +17,20 @@ function toggleClass() {
     });
 }
 
-function changeActiveLink(ev) {
+function isWithinEl(el, sy) {
+    return sy > el.offsetTop - OFFSET && sy < (el.offsetTop + el.scrollHeight - OFFSET);
+}
+
+function changeActiveLink() {
     var sy = window.scrollY;
-    if (sy > projectsEl.offsetTop - OFFSET && sy < (projectsEl.offsetTop + projectsEl.scrollHeight - OFFSET)) {
+    if (isWithinEl(projectsEl, sy)) {
         linkIndex = 2;
-    } else if (sy > skillsEl.offsetTop - OFFSET && sy < (skillsEl.offsetTop + skillsEl.scrollHeight - OFFSET)) {
+    } else if (isWithinEl(skillsEl, sy)) {
         linkIndex = 1;
-    } else if (sy > aboutEl.offsetTop - OFFSET && sy < (aboutEl.offsetTop + aboutEl.scrollHeight - OFFSET)) {
+    } else if (isWithinEl(aboutEl, sy)) {
         linkIndex = 0;
+    } else {
+        linkIndex = -1;
     }
 
     toggleClass();
