@@ -44,6 +44,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -198,7 +199,12 @@
 
   <section class="container" id="contact">
     <h3>Contact Me</h3>
-    <p>Interested in my works? You can contact me by sending an e-mail at <a href="#">me@nedpals.xyz</a></p>
+    <p>Interested in my works? You can contact me by sending an e-mail at</p>
+
+    <div class="email-address-form">
+      <input onclick="copyEmailAddress()" type="email" id="email-address" value="me@nedpals.xyz" readonly />
+      <button onclick="copyEmailAddress()" class="copy-button">Copy</button>
+    </div>
   </section>
   
   <footer class="container">
