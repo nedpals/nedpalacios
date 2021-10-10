@@ -1,0 +1,172 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6,
+.text-title {
+  font-family: 'Bitter', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+a {
+  color: #3AAED8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header a {
+  color: inherit;
+}
+
+header > a {
+  font-family: 'Bitter', Georgia, 'Times New Roman', Times, serif;
+  margin: 1.3rem 0;
+}
+
+header ul li {
+  margin-top: 1.3rem;
+}
+
+header ul li a.active:after {
+  content: "";
+  background-color: #3AAED8;
+  height: 0.4rem;
+  width: 100%;
+  display: block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: 0.88rem;
+}
+
+#about .avatar {
+  background-image: url(portfolio_assets/face.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: gray;
+  border-radius: 100%;
+}
+
+#skills .heading h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 2.77778rem;
+  display: table;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  padding: 0 1rem;
+}
+
+#skills .heading hr {
+  border-width: 2px; 
+  border-style: solid;
+}
+
+.projects-bg {
+  margin-top: -13rem;
+  background-image: url(portfolio_assets/diagonal-bg.svg);
+  height: 80rem;
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#projects {
+  padding: 3rem 0;
+  margin-top: -62rem;
+}
+
+#projects .heading h2 {
+  font-size: 4.44444rem;
+  padding-right: 1rem;
+}
+
+#projects .heading .lines {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.line {
+  height: 0.533333rem;
+  background-color: #3F3F3F;
+  width: 100%;
+}
+
+.project {
+  border-radius: 10px;
+  height: 234px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 6px solid #3F3F3F;
+  background-color: rgb(194, 194, 194);
+  background-size: 135%;
+  background-position: top center;
+  color: white;
+  transition: border-color 250ms ease, background-size 250ms ease;
+  position: relative;
+}
+
+.project:hover {
+  background-size: 160%;
+  border-color: #3AAED8;
+}
+
+.project .project-info {
+  background-color: rgba(26, 26, 26, 0.5);
+  padding: 0.8rem;
+  position: absolute;
+  bottom: -5%;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  transition: bottom 250ms ease, opacity 250ms ease;
+}
+
+.project .project-info .arrow {
+  background-image: url(portfolio_assets/chevron-right.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-left: auto;
+  margin-top: 1.6rem;
+}
+
+.project:hover .project-info {
+  bottom: 0;
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 8rem;
+}
+
+.footer-bg {
+  background-image: url(portfolio_assets/grid-fade.svg);
+  height: 100rem;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  margin-top: -99.3rem;
+}
+
+#about, #projects, #contact {
+  scroll-margin-top: 55px;
+}
+
+#skills {
+  scroll-margin-top: 80px;
+}
