@@ -5,6 +5,7 @@
   "author": "Ned Palacios <npdoesmc@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "serve": "http-server dist/",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
@@ -13,5 +14,8 @@
     "autoprefixer": "^10.3.7",
     "parcel": "^2.0.0-rc.0",
     "tailwindcss": "^2.2.16"
+  },
+  "dependencies": {
+    "http-server": "^13.0.2"
   }
 }
