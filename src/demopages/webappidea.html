@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DencityTraQR - Web App Idea</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .columns .column {
+            height: 100vh;
+        }
+
+        .links {
+            background-color: rgba(96, 211, 148, 1);
+        }
+
+        .links a {
+            flex: 1;
+            text-align: center;
+            background-size: 150%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 500ms ease;
+        }
+        
+        .links a:hover {
+            background-size: 180%;
+        }
+        
+        .links a .title {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 500ms ease;
+        }
+
+        .links a .title:hover {
+            background: rgba(0, 0, 0, 0.75);
+        }
+    </style>
+</head>
+<body>
+    <div class="columns m-0">
+        <div style="position: relative;" class="has-background-dark column p-0">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; height: 100%; width: 100%;">
+                <div style="height: 100%; width: 100%; background: rgba(0, 0, 0, 0.50);" class="is-flex is-flex-direction-column is-justify-content-center p-6">
+                    <h1 class="title is-1 has-text-white">DencityTraQR</h1>
+                    <p class="subtitle is-3 has-text-white">A website that provides you the tools to make you be prepared whenever wherever against the spread of COVID-19.</p>
+                </div>
+            </div>
+            <video style="height: 100%; width: 100%; object-fit: cover;" src="https://files.catbox.moe/gykfw4.mp4" autoplay="autoplay" loop muted></video>
+        </div>
+        <div class="has-text-white links column p-0 is-flex is-flex-direction-column">
+            <a href="https://docs.google.com/presentation/d/1N4nhUn2-cZDHATua5FjnhszEMJNLOIDdUvQBJD9fjds/edit?usp=sharing" class="has-text-white" style="background-image: url(../portfolio_assets/webappidea/googleslides.png);">
+                <span class="p-6 title has-text-white is-1">Google Slides</span>
+            </a>
+            <a href="https://dencitytraqr-scriptkiddies.herokuapp.com/" class="has-text-white" style="background-image: url(../portfolio_assets/webappidea/demo.png);">
+                <span class="p-6 title has-text-white is-1">Demo Page</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
